@@ -1,0 +1,29 @@
+$minWidth: 360;
+$maxWidth: 1440;
+$maxWidthContainer: 1260;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+$pc: $containerWidth; 
+$tablet: 991.98px; 
+$mobile: 767.98px; 
+$mobileSmall: 479.98px; 
+
+%img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+$textColor: #1E293B;
+$redColor: #ED1B24;
+$darkblueColor: #0C3055;
+$blueColor: #1B6EC2;
+$purpleColor: #7454AF;
+$terracotColor: #FB8F5E;
+$greenColor: #009A81;
+$greyColor: rgba(30, 41, 59, 0.55);
+$backgroundColor: #F1F5F9;
+$whiteColor: #FFFFFF;
+$mainFontFamily: "Arial";
+$regular: 400;
+$bold: 700;

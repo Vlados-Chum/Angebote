@@ -1,0 +1,40 @@
+// FOOTER
+
+.footer {
+   padding-block: 10px;
+   background-color: $darkblueColor;
+   color: $whiteColor;
+
+   &__logo {
+      width: 222px;
+      img {
+         @extend %img;
+      }
+      @media (max-width: $mobile) {
+         width: 160px;
+      }
+   }
+
+   &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__right {
+      display: flex;
+      gap: 10px;
+   }
+
+   &__link {
+      font-size: 12px;
+      @media (max-width: $mobile) {
+         font-size: 10px;
+      }
+   }
+
+   &__link:first-child {
+      padding-right: 10px;
+      border-right: 1px solid $whiteColor;
+   }
+}

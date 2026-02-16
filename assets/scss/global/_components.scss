@@ -1,0 +1,31 @@
+// Components
+
+// Buttons
+
+.button {
+   display: flex;
+   width: 172px;
+   padding: 10px 18px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 28px;
+   color: $whiteColor;
+   font-size: 16px;
+   font-weight: $regular;
+   background-color: $blueColor;
+   border: 1px solid $blueColor;
+   transition: all 0.3s ease-in-out;
+   flex-shrink: 0;
+   @media (max-width: $tablet) {
+      max-width: 100%;
+      width: 100%;
+   }
+   @media (max-width: $mobile) {
+      max-width: 194px;
+   }
+   &:hover {
+      background-color: $whiteColor;
+      color: $blueColor;
+   }
+}
+

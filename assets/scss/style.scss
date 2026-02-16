@@ -1,0 +1,99 @@
+@use "sass:math";
+@import "global/reset";
+@import "global/functions";
+@import "global/fonts";
+@import "global/vars";
+@import "global/components";
+@import "global/header";
+@import "global/footer";
+@import "global/home";
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	font-family: $mainFontFamily;
+	color: $textColor;
+	position: relative;
+   background-color: $backgroundColor;
+
+}
+
+.wrapper {
+	position: relative;
+   overflow: clip;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+	& > main {
+   	flex-grow: 1;
+	}
+}
+
+[class$="__container"] {
+	max-width: $containerWidth + px;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+
+h1 {
+   font-family: $mainFontFamily;
+   font-weight: $bold;
+   @include adaptiveValue('font-size', 45, 30);
+   line-height: 1;
+   color: $whiteColor;
+}
+
+h2 {
+   font-family: $mainFontFamily;
+   font-weight: $bold;
+   @include adaptiveValue('font-size', 30, 28);
+   line-height: 1.2;
+   color: #1E293B;
+}
+
+h3 {
+   font-family: $mainFontFamily;
+   font-weight: $bold;
+   @include adaptiveValue('font-size', 20, 16);
+   line-height: 1;
+   color: $textColor;
+}
+
+h4 {
+   font-family: $mainFontFamily;
+   font-weight: $regular;
+   @include adaptiveValue('font-size', 16, 12);
+   line-height: 1;
+   @media (max-width: $mobileSmall) {
+      line-height: 1.3;
+   }
+}
+
+.text {
+   font-family: $mainFontFamily;
+   font-weight: $regular;
+   @include adaptiveValue('font-size', 16, 12);
+   line-height: 1.6;
+   color: $textColor;
+   
+   span {
+      font-weight: $bold;
+   }
+   @media (max-width: $mobileSmall) {
+      line-height: 1;
+   }
+}
+
+.person {
+   font-family: $mainFontFamily;
+   font-weight: $regular;
+   font-size: 14px;
+   line-height: 1.6;
+   color: $greyColor;
+   @media (max-width: $mobileSmall) {
+      line-height: 1;
+   }
+}

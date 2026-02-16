@@ -1,0 +1,515 @@
+// SOFTWARE
+
+.software {
+   @include adaptiveValue('padding-top', 57, 27);
+   @include adaptiveValue('padding-bottom', 62, 30);
+
+   &__head {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 10px;
+      }
+   }
+
+   &__title {
+      width: 100%;
+   }
+
+   &__img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 106px;
+      height: 30px;
+      aspect-ratio: 53/15;
+      @media (max-width: $tablet) {
+         position: relative;
+      }
+      img {
+         @extend %img;
+      }
+   }
+
+	&__body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 35px;
+      @media (max-width: $mobile) {
+         flex-direction: column-reverse;
+      }
+	}
+
+	&__left {
+      max-width: 35%;
+      @include adaptiveValue('padding', 34, 22);
+      border-radius: 16px;
+      border: 2px solid #DCE1E6;
+      background: $whiteColor;
+      box-shadow: 0 4px 12px 0 rgba(51, 51, 51, 0.08);
+      @media (max-width: $tablet) {
+         max-width: 100%;
+      }
+      .text--grey {
+         color: #7C7B7B !important;
+      }
+	}
+
+	&__right {
+      width: 100%;
+	}
+
+   .left {
+
+	   &__top {
+         border-bottom: 1px solid #D3D3D3;
+         padding-bottom: 22px;
+	   }
+
+      &__paragraphs {
+         p:first-child {
+            margin-bottom: 22px;
+         }
+      }
+
+      &__list {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         gap: 8px;
+         margin-bottom: 22px;
+	   }
+
+      &__item-list {
+         display: flex;
+         padding: 14px;
+         justify-content: space-between;
+         align-items: flex-start;
+         gap: 10px;
+         border-radius: 9px;
+         border: 1px solid #B0B3B5;
+	   }
+
+      &__item-text {
+         color: rgba(30, 41, 59, 0.75);
+         font-size: 14px;
+         font-weight: $bold;
+         line-height: normal;
+	   }
+
+      &__text {
+         color: $textColor;
+         @include adaptiveValue('font-size', 14, 12);
+         font-weight: $regular;
+         line-height: 1.6;
+         span {
+            font-weight: $bold;
+         }
+	   }
+
+      &__center {
+         width: 100%;
+         height: 100%;
+         padding-top: 22px;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         gap: 22px;
+         border-bottom: 1px solid #D3D3D3;
+         margin-bottom: 22px;
+         padding-bottom: 22px;
+         @media (max-width: $mobile) {
+            justify-content: center;
+         }
+         p {
+            text-align: center;
+         }
+         span {
+            color: #8F8F8F;
+            text-align: center;
+         }
+         .left__name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p, span {
+               margin-bottom: 0;
+            }
+         }
+	   }
+
+      &__img-canter {
+         width: 132px;
+         height: 132px;
+         flex-shrink: 0;
+         aspect-ratio: 1/1;
+         
+         img {
+            @extend %img;
+         }
+	   }
+
+      &__bottom {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+	   }
+
+      &__labels {
+         width: 190px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 22px;
+      }
+   }
+
+   .right {
+      padding-right: 45px;
+      display: flex;
+      @media (max-width: $mobile) {
+         padding-right: 0;
+      }
+      
+		&__spollers {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+         gap: 14px;
+		}
+
+		&__spoller {
+         display: flex;
+         max-width: 745px;
+         width: 100%;
+         padding: 22px;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 18px;
+         flex-shrink: 1;
+         background-color: $whiteColor;
+         border-radius: 16px;
+         border: 2px solid rgba(237, 27, 36, 0.55);
+         box-shadow: 0 4px 12px 0 rgba(51, 51, 51, 0.08);
+         position: relative;
+		}
+
+      .spoller {
+
+		   &__head {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: flex-start;
+            position: relative;
+            @media (max-width: $mobileSmall) {
+               width: 90%;
+            }
+		   }
+
+		   &__discount-head {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            background-color: $redColor;
+            color: $whiteColor;
+            text-align: center;
+            font-size: 24px;
+            font-weight: $bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 13px;
+            &--green {
+               background-color: $greenColor;
+            }
+            &--purple {
+               background-color: $purpleColor;
+            }
+            &--orange {
+               background-color: $terracotColor;
+            }
+            @media (max-width: $mobile) {
+               width: 78px;
+               height: 78px;
+               font-size: 18px;
+            }
+		   }
+
+         &__discount-text {
+            font-size: 18px;
+            @media (max-width: $mobile) {
+               font-size: 12px;
+            }
+         }
+
+		   &__expiry-discount {
+            color: rgba(30, 41, 59, 0.52);
+            font-size: 14px;
+            font-weight: $regular;
+            margin-bottom: 4px;
+		   }
+
+		   &__date {
+            color: $textColor;
+            font-size: 14px;
+            font-weight: $regular;
+            margin-bottom: 8px;
+		   }
+
+		   &__quastionare {
+            display: flex;
+            width: 51px;
+            padding: 10px 7px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+            border-radius: 22px;
+            border: 1px solid #E6E6E6;
+            background: rgba(237, 237, 237, 0.48);
+            color: #334155;
+            font-size: 16px;
+            font-weight: $regular;
+            line-height: 0.9;
+            transition: all 0.3s ease-in-out;
+            &.active {
+               background-color: rgba(51, 65, 85, 0.54);
+               color: $whiteColor;
+            }
+            cursor: pointer;
+            &--left {
+               display: none;
+               width: 100%;
+               @media (max-width: $mobile) {
+               display: flex;
+            }
+            }
+            &--right {
+               position: relative;
+               @media (max-width: $mobile) {
+               display: none;
+            }
+            }
+            img {
+               width: 16px;
+               height: 14px;
+            }
+		   }
+
+		   &__center-head {
+            width: 100%;
+		   }
+
+		   &__top-center {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 10px;
+		   }
+
+		   &__deal {
+            display: flex;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: 1px solid $redColor;
+            background: rgba(237, 27, 36, 0.08);
+            color: $redColor;
+            font-size: 14px;
+            font-weight: $regular;
+            &--green {
+               border: 1px solid $greenColor;
+               background: rgba(0, 154, 129, 0.08);
+               color: $greenColor;
+            }
+		   }
+
+         &__action {
+            color: rgba(30, 41, 59, 0.55);
+            font-size: 14px;
+            font-weight: $regular;
+         }
+
+		   &__mid-center {
+            margin-bottom: 20px;
+            width: 100%;
+		   }
+
+		   &__benefit {
+            margin-bottom: 9px;
+		   }
+
+		   &__explanation {
+            color: $textColor;
+            @include adaptiveValue('font-size', 16, 12);
+            font-weight: $regular;
+		   }
+
+		   &__buttons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 6px;
+            @media (max-width: $tablet) {
+               flex-wrap: wrap;
+            }
+            @media (max-width: $mobile) {
+               flex-wrap: nowrap;
+            }
+            @media (max-width: 569px) {
+               flex-wrap: wrap;
+            }
+		   }
+
+         &__group-buttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 6px;
+         }
+
+		   &__details-button,
+         &__coupon-button {
+            display: flex;
+            width: 128px;
+            padding: 10px 18px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 28px;
+            border: 1px solid #CBD5E1; 
+            color: $textColor;
+            font-size: 16px;
+            font-weight: $regular;
+            transition: all 0.3s ease-in-out;
+            @media (max-width: $mobile) {
+               max-width: 94px;
+               width: 100%;
+            }
+            &:hover {
+               background-color: #CBD5E1;
+            }
+		   }
+
+		   &__right-head {
+            height: 100%;
+            padding-left: 8px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-self: flex-end;
+            position: relative;
+            @media (max-width: $mobile) {
+               display: none;
+            }
+		   }
+
+         &__hint-head {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            padding: 30px 9px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -49px;
+            top: 9px;
+            border-radius: 50px;
+            background: $redColor;
+            box-shadow: 0 4px 12px 0 rgba(51, 51, 51, 0.08);
+             @media (max-width: $mobile) {
+               right: -15px;
+               top: -15px;
+            }
+            @media (max-width: 530px) {
+               width: 62px;
+               height: 62px;
+               padding: 32px 9px;
+               right: -15px;
+               top: -10px;
+            }
+            .hint {
+               color: $whiteColor;
+               font-size: 17px;
+               font-weight: $regular;
+               @media (max-width: 530px) {
+                  font-size: 12px;
+               }
+               span {
+                  font-weight: $bold;
+               }
+            }
+         }
+
+		   &__wrapper {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+		   }
+
+		   &__body {
+            background-color: #F1F5F9;
+            @include adaptiveValue('padding', 24, 16);
+            border-radius: 9px;
+
+		   }
+
+		   &__feedback-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+		   }
+
+          &__feedback-item {
+            width: 100%;
+		   }
+
+		   &__feedback-item:not(:last-child) {
+            padding-bottom: 12px;
+            border-bottom: 1px solid #D3D3D3;
+            margin-bottom: 12px;
+		   }
+
+		   &__plot-feedback {
+            color: $textColor;
+            @include adaptiveValue('font-size', 14, 12);
+            font-weight: $regular;
+            line-height: 1.6;
+            @media (max-width: $mobile) {
+               line-height: 1;
+            }
+		   }
+
+         &__author-feedback {
+            color: rgba(30, 41, 59, 0.55);
+            font-size: 14px;
+            font-weight: $bold;
+            line-height: 1.6;
+            margin-bottom: 3px;
+            @media (max-width: $mobile) {
+               line-height: 1;
+            }
+		   }
+      }
+   }
+}

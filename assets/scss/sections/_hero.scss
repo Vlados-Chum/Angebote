@@ -1,0 +1,132 @@
+// HERO
+
+.hero {
+   @include adaptiveValue('padding-block', 81, 50);
+   background:radial-gradient(50% 50% at 50% 50%, #3D90E2 0%, #155798 100%);
+   color: $whiteColor;
+
+   &__container {
+      max-width: 1062px;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__title {
+      margin-bottom: 17px;
+      text-align: center;
+   }
+
+   &__subtitle {
+      @include adaptiveValue('font-size', 20, 14);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 27px;
+      text-align: center;
+   }
+
+	&__adv {
+      display: flex;
+      max-width: 490px;
+      padding: 5px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-radius: 16px;
+      border: 1px solid $whiteColor;
+      background: $whiteColor;
+      position: relative;
+      @media (max-width: $mobileSmall) {
+         padding-right: 29px;
+      }
+	}
+
+   &__left-adv {
+      height: 100%;
+      display: flex;
+      padding: 15px 20px 13px 21px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      background: #D7EBFF;
+      flex-direction: column;
+      p:first-child {
+         color: #1C60A4;
+         text-align: center;
+         @include adaptiveValue('font-size', 24, 18);
+         font-weight: $bold;
+      }
+      p:last-child {
+         color: rgba(28, 96, 164, 0.60);
+         text-align: center;
+         @include adaptiveValue('font-size', 17, 14);
+         font-weight: $bold;
+      }
+	}
+
+   &__center-adv {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+	}
+
+   &__stars-center {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      justify-content: flex-start;
+	}
+
+   &__name-adv {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 7px;
+	}
+
+   &__text-adv {
+      color: #000;
+      @include adaptiveValue('font-size', 14, 12);
+      font-weight: $bold;
+   }
+
+   &__link-adv {
+      width: 65px;
+      @media (max-width: $mobileSmall) {
+         width: 56px;
+      }
+
+	}
+
+   &__update {
+      color: #000;
+      @include adaptiveValue('font-size', 14, 12);
+      font-weight: 400;
+	}
+
+   &__right-adv {
+      max-width: 117px;
+      aspect-ratio: 117/76;
+      @media (max-width: $mobileSmall) {
+         position: absolute;
+         right: 9px;
+         top: -31px;
+         width: 79px;
+         aspect-ratio: 79/51;
+      }
+	}
+
+   &__ekomi-link {
+      width: 100%;
+	}
+
+	&__ekomi-img {
+      @extend %img;
+	}
+}

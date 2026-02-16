@@ -1,0 +1,15 @@
+// HEADER
+
+.header {
+	padding-block: 10px;
+	background-color: $darkblueColor;
+
+	&__logo {
+      width: 222px;
+      img {
+         @extend %img;
+      }
+	}
+
+}
+
